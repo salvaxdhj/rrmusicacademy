@@ -6,13 +6,13 @@ export const IMAGES = {
   logoWhite: "/images/logo_blanco.png",
 
   hero: {
-    main: "/images/carousel/carrusel_1.jpg",
+    main: "/images/carrusel_1.jpg",
     carousel: [
-      "/images/carousel/carrusel_1.jpg",
-      "/images/carousel/carrusel_2.jpg",
-      "/images/carousel/carrusel_3.jpg",
-      "/images/carousel/carrusel_4.jpg",
-      "/images/carousel/carrusel_5.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_2.jpg",
+      "/images/carrusel_3.jpg",
+      "/images/carrusel_4.jpg",
+      "/images/carrusel_5.jpg",
     ],
   },
   elencos: {
@@ -30,50 +30,46 @@ export const IMAGES = {
     header: "/images/fondo_rafo.png",
     profile: "/images/rafo_director.png",
     action: "/images/fondo_rafo.png",
-    article1:
-      "https://images.unsplash.com/photo-1525362081669-2b476bb628c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    article2:
-      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    article3:
-      "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    article1: "/images/orquesta_sinfonica.jpeg",
+    article2: "/images/coro.jpeg",
+    article3: "/images/banda.jpeg",
   },
   plans: {
-    header:
-      "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=2670&auto=format&fit=crop",
+    header: "/images/about_header.jpg",
   },
   teachers: {
     header: "/images/teachers_header.jpg",
   },
   experiences: {
-    header: "/images/about_header-1.jpg",
+    header: "/images/about_header.jpg",
     vienna: [
-      "https://images.unsplash.com/photo-1516483638261-f4dafaf00bc0?w=800&q=80",
-      "https://images.unsplash.com/photo-1516483638261-f4dafaf00bc0?w=800&q=80",
-      "https://images.unsplash.com/photo-1516483638261-f4dafaf00bc0?w=800&q=80",
-      "https://images.unsplash.com/photo-1516483638261-f4dafaf00bc0?w=800&q=80",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_2.jpg",
+      "/images/carrusel_3.jpg",
+      "/images/carrusel_4.jpg",
     ],
     cusco: [
-      "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&q=80",
-      "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&q=80",
-      "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&q=80",
-      "https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800&q=80",
+      "/images/carrusel_5.jpg",
+      "/images/coro.jpeg",
+      "/images/banda.jpeg",
+      "/images/ensambles.jpeg",
     ],
     brazil: [
-      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&q=80",
-      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&q=80",
-      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&q=80",
-      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&q=80",
+      "/images/orquesta_sinfonica.jpeg",
+      "/images/about_header.jpg",
+      "/images/about_history.jpg",
+      "/images/teachers_header.jpg",
     ],
   },
   gallery: [
-    "/images/carousel/carrusel_1.jpg",
-    "/images/carousel/carrusel_2.jpg",
-    "/images/carousel/carrusel_3.jpg",
-    "/images/carousel/carrusel_4.jpg",
-    "/images/carousel/carrusel_5.jpg",
+    "/images/carrusel_1.jpg",
+    "/images/carrusel_2.jpg",
+    "/images/carrusel_3.jpg",
+    "/images/carrusel_4.jpg",
+    "/images/carrusel_5.jpg",
   ],
   store: {
-    header: "/images/about_history-1.jpg",
+    header: "/images/about_history.jpg",
   },
 };
 
@@ -162,9 +158,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "La guitarra clásica más recomendada para estudiantes. Excelente resonancia, comodidad en el diapasón y durabilidad. Perfecta para tus primeras clases en la academia.",
     images: [
-      "/images/products/g1/1.jpg",
-      "/images/products/g1/2.jpg",
-      "/images/products/g1/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
   {
@@ -175,9 +171,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "88 teclas con acción de martillo escalada. Incluye pedal de sustain y atril. Sonido de piano de cola auténtico en un diseño compacto y portátil.",
     images: [
-      "/images/products/p1/1.jpg",
-      "/images/products/p1/2.jpg",
-      "/images/products/p1/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
   {
@@ -188,9 +184,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "Kit completo: Violín, arco, brea y estuche rígido. Ideal para iniciar el método Suzuki. Maderas seleccionadas para un sonido cálido.",
     images: [
-      "/images/products/v1/1.jpg",
-      "/images/products/v1/2.jpg",
-      "/images/products/v1/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
   {
@@ -201,9 +197,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "Set completo de 5 piezas con platillos y hardware incluido. Color Wine Red. Todo lo que necesitas para empezar a marcar el ritmo.",
     images: [
-      "/images/products/d1/1.jpg",
-      "/images/products/d1/2.jpg",
-      "/images/products/d1/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
   {
@@ -214,9 +210,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "Alta precisión para guitarra, bajo, violín y ukelele. Pantalla LCD iluminada y giratoria de 360 grados. Batería incluida.",
     images: [
-      "/images/products/a1/1.jpg",
-      "/images/products/a1/2.jpg",
-      "/images/products/a1/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
   {
@@ -227,9 +223,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "Estructura metálica resistente, altura regulable y funda de transporte. Esencial para la lectura musical correcta y una buena postura.",
     images: [
-      "/images/products/a2/1.jpg",
-      "/images/products/a2/2.jpg",
-      "/images/products/a2/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
   // MERCH
@@ -241,9 +237,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "Hoodie negro con logo bordado de alta calidad. Algodón reactivo premium que no encoge. Viste la pasión por la música.",
     images: [
-      "/images/products/m1/1.jpg",
-      "/images/products/m1/2.jpg",
-      "/images/products/m1/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
   {
@@ -254,9 +250,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "T-shirt de corte moderno con nuestro slogan. Disponible en blanco y negro. Algodón pima fresco y suave.",
     images: [
-      "/images/products/m2/1.jpg",
-      "/images/products/m2/2.jpg",
-      "/images/products/m2/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
   {
@@ -267,9 +263,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "Gorra urbana con logo en relieve 3D. Ajustable. Estilo clásico snapback para protegerte del sol con estilo.",
     images: [
-      "/images/products/m3/1.jpg",
-      "/images/products/m3/2.jpg",
-      "/images/products/m3/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
   {
@@ -280,9 +276,9 @@ export const STORE_PRODUCTS: Product[] = [
     description:
       "Bolso de tela resistente ideal para llevar tus partituras y accesorios. Diseño ecológico y lavable.",
     images: [
-      "/images/products/m4/1.jpg",
-      "/images/products/m4/2.jpg",
-      "/images/products/m4/3.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
+      "/images/carrusel_1.jpg",
     ],
   },
 ];
