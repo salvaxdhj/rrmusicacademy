@@ -117,34 +117,6 @@ export const TEACHERS_DATA: Teacher[] = [
     bio: "Profesor de RR Academy.",
     imageUrl: "/images/teachers_teacher6.jpg",
   },
-  {
-    id: "7",
-    name: "Diego Meneses",
-    role: "Profesor",
-    bio: "Profesor de RR Academy.",
-    imageUrl: "/images/teachers_teacher7.jpg",
-  },
-  {
-    id: "8",
-    name: "Eduardo Angulo",
-    role: "Profesor",
-    bio: "Profesor de RR Academy.",
-    imageUrl: "/images/teachers_teacher8.jpg",
-  },
-  {
-    id: "9",
-    name: "Emilio Zapata",
-    role: "Profesor",
-    bio: "Profesor de RR Academy.",
-    imageUrl: "/images/teachers_teacher9.jpg",
-  },
-  {
-    id: "10",
-    name: "Gabriel Cutti",
-    role: "Profesor",
-    bio: "Profesor de RR Academy.",
-    imageUrl: "/images/teachers_teacher10.jpg",
-  },
 ];
 
 // --- PRODUCTOS DE LA TIENDA ---

@@ -149,17 +149,26 @@ const Director: React.FC = () => {
       {/* Action Shot Section */}
       <div className="relative bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-rr-blue rounded-2xl shadow-xl overflow-hidden text-center py-12 px-6 sm:py-16 sm:px-16 lg:py-20 lg:px-20 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              <span className="block">La música transforma vidas.</span>
-              <span className="block text-blue-200">
-                Déjanos guiar la tuya.
-              </span>
-            </h2>
-            <p className="mt-4 text-lg leading-6 text-blue-100 max-w-2xl mx-auto">
-              "Mi puerta siempre está abierta para estudiantes y padres. En
-              RR Music Academy, somos una familia unida por el arte."
-            </p>
+          <div className="relative bg-rr-blue rounded-2xl shadow-xl overflow-hidden text-center py-12 px-6 sm:py-16 sm:px-16 lg:py-20 lg:px-20 max-w-4xl mx-auto">
+            <div className="absolute inset-0">
+              <img
+                src={IMAGES.director.action}
+                alt="Director en acción"
+                className="w-full h-full object-cover opacity-20 mix-blend-multiply"
+              />
+            </div>
+            <div className="relative z-10">
+              <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+                <span className="block">La música transforma vidas.</span>
+                <span className="block text-blue-200">
+                  Déjanos guiar la tuya.
+                </span>
+              </h2>
+              <p className="mt-4 text-lg leading-6 text-blue-100 max-w-2xl mx-auto">
+                "Mi puerta siempre está abierta para estudiantes y padres. En
+                RR Music Academy, somos una familia unida por el arte."
+              </p>
+            </div>
           </div>
         </div>
       </div>
