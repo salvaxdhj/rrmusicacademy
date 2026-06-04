@@ -14,6 +14,7 @@ import Store from './components/Store';
 import ProductDetail from './components/ProductDetail';
 import CartSidebar from './components/CartSidebar';
 import Article from './components/Article';
+import Maintenance from './components/Maintenance';
 import { ShopProvider } from './context/ShopContext';
 
 const ScrollToTop = () => {
@@ -27,6 +28,12 @@ const ScrollToTop = () => {
 }
 
 const App: React.FC = () => {
+  const isMaintenanceMode = true;
+
+  if (isMaintenanceMode) {
+    return <Maintenance />;
+  }
+
   return (
     <ShopProvider>
         <HashRouter>
