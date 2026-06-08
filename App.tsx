@@ -28,7 +28,7 @@ const ScrollToTop = () => {
 }
 
 const App: React.FC = () => {
-  const isMaintenanceMode = true;
+  const isMaintenanceMode = false;
 
   if (isMaintenanceMode) {
     return <Maintenance />;
