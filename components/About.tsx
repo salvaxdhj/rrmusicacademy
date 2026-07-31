@@ -15,18 +15,13 @@ const About: React.FC = () => {
       icon: Globe,
     },
     {
-      name: 'Departamento Psicopedagógico',
-      description: 'Contamos con un Departamento Psicopedagógico al servicio de nuestra comunidad educativa.',
-      icon: Brain,
-    },
-    {
       name: 'Recitales y Conciertos',
       description: 'Ofrecemos recitales y conciertos a lo largo del año con nuestros alumnos y maestros.',
       icon: Mic,
     },
     {
-      name: 'Clases Maestras y Intercambios',
-      description: 'Organizamos Clases Maestras y realizamos intercambios culturales con nuestros alumnos tanto a nivel nacional e internacional.',
+      name: 'Clases maestras e intercambios',
+      description: 'Organizamos Clases Maestras y realizamos intercambios culturales con nuestros alumnos tanto a nivel nacional como internacional.',
       icon: BookOpen,
     },
     {
@@ -43,6 +38,11 @@ const About: React.FC = () => {
       name: 'Preparación Profesional',
       description: 'Brindamos un programa de preparación especializado para todos los que quieren postular a la carrera de música en el Perú y en el extranjero.',
       icon: Target,
+    },
+    {
+      name: 'Departamento Psicopedagógico',
+      description: 'Contamos con un Departamento Psicopedagógico al servicio de nuestra comunidad educativa.',
+      icon: Brain,
     },
   ];
 
@@ -71,8 +71,7 @@ const About: React.FC = () => {
             Quiénes Somos
           </h1>
           <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
-            Más que una escuela, somos un hogar para el desarrollo artístico. 
-            RR Music Academy nació con la visión de democratizar la excelencia musical.
+            Más que una escuela, somos un hogar para el desarrollo artístico.
           </p>
         </div>
       </div>
@@ -84,9 +83,14 @@ const About: React.FC = () => {
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
               Sobre nosotros
             </h2>
-            <p className="mt-4 text-lg text-gray-500 leading-relaxed">
-              Institución con más de quince años de experiencia en el campo de la pedagogía musical, es el proyecto educativo más importante de RR MUSIC CORP. Es una escuela de música única en el país, destinada a la formación integral de la siguiente generación de músicos, funcionando como un puente hacia la educación musical profesional. Con una oferta que incluye cursos presenciales, a domicilio y on-line, se posiciona como la única escuela de música activamente bilingüe en el Perú, con colaboraciones internacionales, constante actividad interinstitucional y con un Departamento Psicopedagógico a disposición del bienestar integral de toda nuestra comunidad educativa. Asimismo, contamos con tres elencos gratuitos generando espacios de práctica y desarrollo cultural a través de intercambios internacionales: Orquesta Sinfónica RR Academy, Banda Sinfónica RR Academy y Coro Polifónico RR Academy.
-            </p>
+            <div className="mt-4 text-lg text-gray-500 leading-relaxed space-y-4">
+              <p>
+                Institución con más de veinte años de experiencia en el campo de la pedagogía musical y proyecto educativo más importante de la ASOCIACIÓN CULTURAL RR MUSIC CORP.
+              </p>
+              <p>
+                RR MUSIC ACADEMY, única en el país, está destinada a la formación integral de la siguiente generación de músicos en sus dos secciones de estudio: popular y académica, funcionando como un puente hacia la educación musical profesional. Con una oferta que incluye cursos presenciales, a domicilio y on-line, se posiciona como la única escuela de música activamente bilingüe en el Perú, con colaboraciones y convenios internacionales, constante actividad interinstitucional y con un Departamento Psicopedagógico a disposición del bienestar integral de toda nuestra comunidad educativa. Asimismo, nuestro On-Stage Music Program, está destinado a alumnos que quieran formar bandas de rock y géneros afines, así como también nuestros elencos clásicos gratuitos generan espacios de práctica y desarrollo cultural a través de intercambios internacionales: Orquesta Sinfónica RR Music Academy, Banda Sinfónica RR Music Academy y Coro Polifónico RR Music Academy.
+              </p>
+            </div>
           </div>
           <div className="mt-10 lg:mt-0 relative">
              <div className="absolute -inset-4 bg-rr-blue opacity-10 rounded-2xl transform rotate-3"></div>

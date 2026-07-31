@@ -1,4 +1,6 @@
-import React from 'react';
+const fs = require('fs');
+
+const content = `import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Check, Star, Zap, Music, Award, Users, ArrowRight } from 'lucide-react';
 
@@ -101,7 +103,7 @@ const DiplomaPlans: React.FC = () => {
                             <div className="h-full p-10 flex flex-col relative overflow-hidden bg-white rounded-[23px]">
                                 <div className="relative z-10 flex-grow">
                                     <h3 className="font-['Oswald'] text-4xl text-gray-900 uppercase tracking-wide mb-2">Instrumento Principal</h3>
-                                    <p className="text-gray-500 text-sm italic mb-8 border-b border-gray-100 pb-6">Enfocado a la formación y desarrollo técnico musical. (Clases Grupales)</p>
+                                    <p className="text-gray-500 text-sm italic mb-8 border-b border-gray-100 pb-6">Enfocado a la formación y desarrollo técnico musical.</p>
                                     
                                     <div className="flex items-baseline gap-2 mb-10">
                                         <span className="text-6xl font-light text-rr-blue font-['Oswald']">S/350</span>
@@ -115,7 +117,7 @@ const DiplomaPlans: React.FC = () => {
                                         </li>
                                         <li className="flex items-center text-gray-700">
                                             <Check className="w-6 h-6 text-rr-blue mr-4 shrink-0" />
-                                            <span className="text-lg font-light">Canto o un instrumento a elegir (Grupal)</span>
+                                            <span className="text-lg font-light">Canto o un instrumento a elegir</span>
                                         </li>
                                         <li className="flex items-center text-gray-700">
                                             <Check className="w-6 h-6 text-rr-blue mr-4 shrink-0" />
@@ -130,7 +132,7 @@ const DiplomaPlans: React.FC = () => {
                                         target="_blank" rel="noopener noreferrer"
                                         className="w-full py-5 border border-rr-blue rounded-lg text-rr-blue font-bold uppercase tracking-[0.2em] text-sm hover:bg-rr-blue hover:text-white transition-all flex items-center justify-center gap-3"
                                     >
-                                        ¡Inscríbete ahora! <ArrowRight className="w-4 h-4" />
+                                        Inscribirse <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
                             </div>
@@ -144,7 +146,7 @@ const DiplomaPlans: React.FC = () => {
                             <div className="h-full bg-white rounded-[23px] p-10 flex flex-col relative overflow-hidden">
                                 <div className="relative z-10 flex-grow">
                                     <h3 className="font-['Oswald'] text-4xl text-gray-900 uppercase tracking-wide mb-2">Doble Instrumento</h3>
-                                    <p className="text-gray-500 text-sm italic mb-8 border-b border-gray-100 pb-6">Orientado a la formación musical multidisciplinaria. (Clases Grupales)</p>
+                                    <p className="text-gray-500 text-sm italic mb-8 border-b border-gray-100 pb-6">Orientado a la formación musical multidisciplinaria.</p>
                                     
                                     <div className="flex items-baseline gap-2 mb-10">
                                         <span className="text-6xl font-light text-rr-blue font-['Oswald']">S/665</span>
@@ -154,11 +156,11 @@ const DiplomaPlans: React.FC = () => {
                                     <ul className="space-y-6 mb-12">
                                         <li className="flex items-center text-gray-700">
                                             <Check className="w-6 h-6 text-rr-orange mr-4 shrink-0" />
-                                            <span className="text-lg font-light">2 horas (Instrumento Principal Grupal)</span>
+                                            <span className="text-lg font-light">2 horas (Instrumento Principal)</span>
                                         </li>
                                         <li className="flex items-center text-gray-700">
                                             <Check className="w-6 h-6 text-rr-orange mr-4 shrink-0" />
-                                            <span className="text-lg font-light">2 horas (Inst. Secundario Grupal)</span>
+                                            <span className="text-lg font-light">2 horas (Instrumento Secundario)</span>
                                         </li>
                                         <li className="flex items-center text-gray-900">
                                             <Check className="w-6 h-6 text-rr-orange mr-4 shrink-0" />
@@ -173,10 +175,91 @@ const DiplomaPlans: React.FC = () => {
                                         target="_blank" rel="noopener noreferrer"
                                         className="w-full py-5 bg-rr-blue text-white rounded-lg font-bold uppercase tracking-[0.2em] text-sm hover:bg-blue-800 transition-all shadow-xl flex items-center justify-center gap-3"
                                     >
-                                        ¡Inscríbete ahora! <ArrowRight className="w-4 h-4" />
+                                        Inscribirse <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    {/* CURSOS EXCLUSIVOS (MASTERCLASSES) */}
+                    <div className="max-w-6xl mx-auto mb-32">
+                        <div className="relative bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-2xl">
+                             <div className="text-center pt-12 pb-8">
+                                <span className="font-['Satisfy'] text-5xl text-rr-orange mb-2 block">Masterclasses</span>
+                                <h2 className="font-['Oswald'] text-5xl md:text-6xl text-rr-blue uppercase tracking-tight">Cursos Exclusivos</h2>
+                                <div className="w-24 h-1 bg-rr-orange mx-auto mt-6 mb-4"></div>
+                                <p className="text-gray-500">A cargo de especialistas de prestigio internacional.</p>
+                             </div>
+
+                             <div className="p-8 md:p-12 lg:p-16 grid lg:grid-cols-2 gap-16 items-stretch border-t border-gray-100">
+                                 
+                                 {/* COLUMNA IZQUIERDA: LOS CURSOS */}
+                                 <div className="flex flex-col justify-center space-y-10">
+                                      {[
+                                          { title: "Music Business", teacher: "Mario Melgar", num: "01" },
+                                          { title: "Jazz e Improvisación", teacher: "Gabriel Alegría", num: "02" },
+                                          { title: "Pedagogía Musical", teacher: "Rafael Reyes", num: "03" }
+                                      ].map((course, idx) => (
+                                          <div key={idx} className="flex items-center gap-6 group">
+                                              <div className="w-16 h-16 rounded-full border-2 border-rr-orange/30 flex items-center justify-center bg-orange-50 group-hover:bg-orange-100 group-hover:border-rr-orange transition-all">
+                                                  <span className="font-['Oswald'] text-2xl text-rr-orange font-bold">{course.num}</span>
+                                              </div>
+                                              <div>
+                                                  <h4 className="text-3xl font-bold text-gray-900 mb-1 group-hover:text-rr-blue transition-colors">{course.title}</h4>
+                                                  <p className="text-sm text-gray-500 uppercase tracking-[0.2em] font-medium">{course.teacher}</p>
+                                              </div>
+                                          </div>
+                                      ))}
+                                 </div>
+
+                                 {/* COLUMNA DERECHA: TABLA DE PRECIOS */}
+                                 <div className="bg-gray-50 rounded-3xl border border-gray-200 p-8 md:p-10 flex flex-col justify-center shadow-inner">
+                                     <h4 className="text-sm text-gray-500 uppercase tracking-[0.2em] mb-8 text-center border-b border-gray-200 pb-4">
+                                         Opciones de Inversión
+                                     </h4>
+                                     
+                                     <div className="space-y-6">
+                                         {/* Fila 1 */}
+                                         <div className="flex items-center justify-between group cursor-default">
+                                             <span className="text-xl font-bold text-gray-700 group-hover:text-rr-blue transition-colors">1 Curso</span>
+                                             <div className="flex-1 border-b border-dotted border-gray-300 mx-6 relative top-1 opacity-50"></div>
+                                             <div className="text-right">
+                                                  <span className="block font-['Oswald'] text-3xl text-rr-blue">S/350</span>
+                                                  <span className="text-xs text-gray-500 uppercase font-bold">8h / mes</span>
+                                             </div>
+                                         </div>
+
+                                         {/* Fila 2 */}
+                                         <div className="flex items-center justify-between group cursor-default">
+                                             <span className="text-xl font-bold text-gray-700 group-hover:text-rr-blue transition-colors">2 Cursos</span>
+                                             <div className="flex-1 border-b border-dotted border-gray-300 mx-6 relative top-1 opacity-50"></div>
+                                             <div className="text-right">
+                                                  <span className="block font-['Oswald'] text-3xl text-rr-blue">S/665</span>
+                                                  <span className="text-xs text-gray-500 uppercase font-bold">16h / mes</span>
+                                             </div>
+                                         </div>
+
+                                         {/* Fila 3 */}
+                                         <div className="flex items-center justify-between group cursor-default">
+                                             <span className="text-xl font-bold text-gray-700 group-hover:text-rr-blue transition-colors">3 Cursos</span>
+                                             <div className="flex-1 border-b border-dotted border-gray-300 mx-6 relative top-1 opacity-50"></div>
+                                             <div className="text-right">
+                                                  <span className="block font-['Oswald'] text-3xl text-rr-blue">S/945</span>
+                                                  <span className="text-xs text-gray-500 uppercase font-bold">24h / mes</span>
+                                             </div>
+                                         </div>
+                                     </div>
+
+                                     <a 
+                                          href="https://wa.me/51958121740?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20Masterclasses."
+                                          target="_blank" rel="noopener noreferrer"
+                                          className="w-full mt-10 bg-rr-orange hover:bg-orange-500 text-white font-bold py-4 rounded-lg uppercase tracking-widest text-sm transition-all transform hover:scale-[1.02] shadow-lg text-center block"
+                                      >
+                                          Reservar Cupo
+                                      </a>
+                                 </div>
+                             </div>
                         </div>
                     </div>
 
@@ -204,18 +287,11 @@ const DiplomaPlans: React.FC = () => {
                               
                               <div className="flex-shrink-0 text-center z-10 bg-white p-6 rounded-2xl border border-gray-100 shadow-xl min-w-[200px]">
                                   <span className="block text-gray-500 text-sm uppercase tracking-widest mb-1">Precio Add-on</span>
-                                  <span className="block text-5xl font-bold text-rr-blue mb-1">+S/150</span>
+                                  <span className="block text-5xl font-bold text-rr-blue mb-1">+S/100</span>
                                   <div className="w-full h-px bg-gray-200 my-2"></div>
                                   <span className="text-xs text-gray-400 uppercase tracking-wider">Pago Mensual</span>
                               </div>
                          </div>
-                    </div>
-
-                    {/* INICIO */}
-                    <div className="mt-20 text-center pb-12">
-                        <span className="inline-block bg-rr-orange text-white font-bold px-8 py-4 rounded-full text-2xl uppercase tracking-widest shadow-lg">
-                            Inicio Agosto 2026
-                        </span>
                     </div>
 
                 </div>
@@ -225,3 +301,5 @@ const DiplomaPlans: React.FC = () => {
 };
 
 export default DiplomaPlans;
+`
+fs.writeFileSync('components/DiplomaPlans.tsx', content);

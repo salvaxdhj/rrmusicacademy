@@ -1,4 +1,6 @@
-import React from 'react';
+const fs = require('fs');
+
+const content = `import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Check, Star, Music, Users, Clock, CalendarDays, Volume2, ArrowRight } from 'lucide-react';
 
@@ -217,3 +219,5 @@ const JuniorPlans: React.FC = () => {
 };
 
 export default JuniorPlans;
+`
+fs.writeFileSync('components/JuniorPlans.tsx', content);

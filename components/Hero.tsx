@@ -5,6 +5,7 @@ import { IMAGES } from '../constants';
 
 const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,6 +39,27 @@ const Hero: React.FC = () => {
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 text-justify">
                 RR Academy es una escuela de música única en su tipo, destinada a formar talentos musicales en instrumentos de su preferencia
+                {!isExpanded ? (
+                  <span>
+                    ...{' '}
+                    <button
+                      onClick={() => setIsExpanded(true)}
+                      className="text-rr-blue font-semibold hover:underline focus:outline-none"
+                    >
+                      Ver más
+                    </button>
+                  </span>
+                ) : (
+                  <span>
+                    , así como en aspectos teóricos y humanos. La academia se distingue por su fuerte programa de apoyo psicológico y una planificación pedagógica de primer nivel, repotenciando su estructura de clases a domicilio. Además, destina sus esfuerzos a la producción de masterclasses y workshops del rubro musical popular-académico, que complementan la formación integral de los estudiantes.{' '}
+                    <button
+                      onClick={() => setIsExpanded(false)}
+                      className="text-rr-blue font-semibold hover:underline focus:outline-none"
+                    >
+                      Ver menos
+                    </button>
+                  </span>
+                )}
               </p>
               
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start gap-4">

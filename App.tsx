@@ -8,6 +8,8 @@ import About from './components/About';
 import Plans from './components/Plans';
 import JuniorPlans from './components/JuniorPlans';
 import DiplomaPlans from './components/DiplomaPlans';
+import PreparatoryPlans from './components/PreparatoryPlans';
+import OnStagePlans from './components/OnStagePlans';
 import Teachers from './components/Teachers';
 import Director from './components/Director';
 import Store from './components/Store';
@@ -28,7 +30,7 @@ const ScrollToTop = () => {
 }
 
 const App: React.FC = () => {
-  const isMaintenanceMode = true;
+  const isMaintenanceMode = false;
 
   if (isMaintenanceMode) {
     return <Maintenance />;
@@ -52,6 +54,8 @@ const App: React.FC = () => {
                 <Route path="/plans" element={<Plans />} />
                 <Route path="/plans/junior" element={<JuniorPlans />} />
                 <Route path="/plans/diploma" element={<DiplomaPlans />} />
+                <Route path="/plans/preparatory" element={<PreparatoryPlans />} />
+                <Route path="/plans/onstage" element={<OnStagePlans />} />
                 
                 <Route path="/teachers" element={<Teachers />} />
                 
