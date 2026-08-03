@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
     { name: 'Maestros', path: '/teachers' },
     { name: 'Elencos RR', path: '/elencos' }, 
     { name: 'Nuestro Director', path: '/director' },
+    { name: 'Galería', path: '/gallery' },
   ];
 
   const isActive = (path: string) => {

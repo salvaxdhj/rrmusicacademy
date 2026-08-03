@@ -1,4 +1,6 @@
-import React from 'react';
+const fs = require('fs');
+
+const content = `import React from 'react';
 import { IMAGES } from '../constants';
 import { Music, Users, Drum, Mail } from 'lucide-react';
 
@@ -189,3 +191,7 @@ const Elencos: React.FC = () => {
 };
 
 export default Elencos;
+`
+
+fs.writeFileSync('components/Elencos.tsx', content);
+

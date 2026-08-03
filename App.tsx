@@ -17,6 +17,7 @@ import ProductDetail from './components/ProductDetail';
 import CartSidebar from './components/CartSidebar';
 import Article from './components/Article';
 import Maintenance from './components/Maintenance';
+import Gallery from './components/Gallery';
 import { ShopProvider } from './context/ShopContext';
 
 const ScrollToTop = () => {
@@ -50,6 +51,7 @@ const App: React.FC = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/director" element={<Director />} />
                 <Route path="/article/:id" element={<Article />} />
+                <Route path="/gallery" element={<Gallery />} />
                 
                 <Route path="/plans" element={<Plans />} />
                 <Route path="/plans/junior" element={<JuniorPlans />} />
