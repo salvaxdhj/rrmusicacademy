@@ -46,17 +46,17 @@ const Gallery: React.FC = () => {
 
             {/* Photo Grid */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-                <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {uniqueImages.map((src, index) => (
                         <div 
                             key={index} 
-                            className="break-inside-avoid relative group cursor-pointer overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300"
+                            className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 aspect-square max-w-[600px] mx-auto w-full"
                             onClick={() => openModal(src)}
                         >
                             <img 
                                 src={src} 
                                 alt={`Galería RR ${index + 1}`} 
-                                className="w-full object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-105"
+                                className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                                 loading="lazy"
                                 onError={(e) => {
                                     e.currentTarget.parentElement!.style.display = 'none';
