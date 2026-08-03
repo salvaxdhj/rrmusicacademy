@@ -1,88 +1,11 @@
-import { Teacher, Product } from "./types";
+const fs = require('fs');
 
-// --- CONFIGURACIÓN DE IMÁGENES ---
-export const IMAGES = {
-  logo: "/images/logo.png",
-  logoWhite: "/images/logo_blanco.png",
+let content = fs.readFileSync('constants.ts', 'utf8');
 
-  hero: {
-    main: "/images/carrusel_1.jpg",
-    carousel: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_2.jpg",
-      "/images/carrusel_3.jpg",
-      "/images/carrusel_4.jpg",
-      "/images/carrusel_5.jpg",
-    ],
-  },
-  elencos: {
-    header: "/images/orquesta_sinfonica.jpeg",
-    orquesta: "/images/orquesta_sinfonica.jpeg",
-    coro: "/images/coro.jpeg",
-    banda: "/images/banda.jpeg",
-    ensambles: "/images/ensambles.jpeg",
-  },
-  about: {
-    headerBackground: "/images/about_header.jpg",
-    history: "/images/about_history.jpg",
-  },
-  director: {
-    header: "/images/fondo_rafo.png",
-    profile: "/images/rafo_director.png",
-    action: "/images/fondo_rafo.png",
-    article1: "https://images.unsplash.com/photo-1525362081669-2b476bb628c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    article2: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    article3: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  plans: {
-    header: "/images/about_header.jpg",
-  },
-  teachers: {
-    header: "/images/teachers_header.jpg",
-  },
-  experiences: {
-    header: "/images/about_header.jpg",
-    vienna: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_2.jpg",
-      "/images/carrusel_3.jpg",
-      "/images/carrusel_4.jpg",
-    ],
-    cusco: [
-      "/images/carrusel_5.jpg",
-      "/images/coro.jpeg",
-      "/images/banda.jpeg",
-      "/images/ensambles.jpeg",
-    ],
-    brazil: [
-      "/images/orquesta_sinfonica.jpeg",
-      "/images/about_header.jpg",
-      "/images/about_history.jpg",
-      "/images/teachers_header.jpg",
-    ],
-  },
-  galleryHeader: "/images/banner_galeria.png",
-  gallery: [
-    "/images/galeria_1.png",
-    "/images/galeria_2.png",
-    "/images/galeria_3.png",
-    "/images/galeria_4.png",
-    "/images/galeria_5.png",
-    "/images/galeria_6.png",
-    "/images/galeria_7.png",
-    "/images/galeria_8.png",
-    "/images/galeria_9.png",
-    "/images/galeria_10.png",
-    "/images/galeria_11.png",
-    "/images/galeria_12.png",
-  ],
-  store: {
-    header: "/images/about_history.jpg",
-  },
-};
+const startIndex = content.indexOf('export const TEACHERS_DATA: Teacher[] = [');
+const endIndex = content.indexOf('// --- PRODUCTOS DE LA TIENDA ---');
 
-// --- LISTA DE PROFESORES ---
-export const TEACHERS_DATA: Teacher[] = [
+const teachersData = `export const TEACHERS_DATA: Teacher[] = [
   {
     id: "1",
     name: "Franco Carranza",
@@ -164,7 +87,7 @@ export const TEACHERS_DATA: Teacher[] = [
     id: "12",
     name: "Diego Baglietto Sifuentes",
     role: "Profesor de Batería y Percusión",
-    bio: "Baterista y percusionista con más de diez años de trayectoria musical. Se formó en diversas escuelas, entre ellas Emanuel y RR Music Academy, donde actualmente se desempeña como coach musical y miembro de la fila de percusión de su Orquesta y Banda Sinfónica. Su experiencia musical incluye la grabación de un EP con la banda Sonido del Fuego. Actualmente, es el baterista oficial del imitador de Frank Sinatra del programa \"Yo Soy\". Con la sinfónica, ha participado en festivales nacionales e internacionales, destacando el Festival Internacional de Orquestas \"Cuerdas que unen, vidas que sanan\" en Ecuador, año 2025. Asimismo, continúa su perfeccionamiento técnico bajo la guía del maestro Hugo Alcázar.",
+    bio: "Baterista y percusionista con más de diez años de trayectoria musical. Se formó en diversas escuelas, entre ellas Emanuel y RR Music Academy, donde actualmente se desempeña como coach musical y miembro de la fila de percusión de su Orquesta y Banda Sinfónica. Su experiencia musical incluye la grabación de un EP con la banda Sonido del Fuego. Actualmente, es el baterista oficial del imitador de Frank Sinatra del programa \\"Yo Soy\\". Con la sinfónica, ha participado en festivales nacionales e internacionales, destacando el Festival Internacional de Orquestas \\"Cuerdas que unen, vidas que sanan\\" en Ecuador, año 2025. Asimismo, continúa su perfeccionamiento técnico bajo la guía del maestro Hugo Alcázar.",
     imageUrl: "/images/diego_baglietto.jpg",
   },
   {
@@ -202,140 +125,9 @@ export const TEACHERS_DATA: Teacher[] = [
     bio: "Educador musical con más de doce años de experiencia en la formación técnica, teórica y artística de estudiantes de nivel inicial, intermedio y avanzado. Estudió Educación Musical en la Universidad Nacional de Música, actualmente se encuentra especializándose en instrumentos de viento metal, siendo el Eufonio su instrumento principal. Su metodología integradora combina el rigor del lenguaje musical tradicional con enfoques prácticos orientados al desarrollo del oído, la técnica instrumental y la interpretación expresiva.",
     imageUrl: "/images/jose_vega.jpg",
   }
-];
+];`;
 
-// --- PRODUCTOS DE LA TIENDA ---
-// NOTA: Asegúrate de crear la carpeta images/products/[id]/1.jpg, 2.jpg, 3.jpg
-export const STORE_PRODUCTS: Product[] = [
-  {
-    id: "g1",
-    name: "Guitarra Acústica Yamaha C40",
-    price: 480,
-    category: "Cuerdas",
-    description:
-      "La guitarra clásica más recomendada para estudiantes. Excelente resonancia, comodidad en el diapasón y durabilidad. Perfecta para tus primeras clases en la academia.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-  {
-    id: "p1",
-    name: "Piano Digital Casio CDP-S110",
-    price: 2100,
-    category: "Teclado",
-    description:
-      "88 teclas con acción de martillo escalada. Incluye pedal de sustain y atril. Sonido de piano de cola auténtico en un diseño compacto y portátil.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-  {
-    id: "v1",
-    name: "Violín Stradella 4/4",
-    price: 350,
-    category: "Cuerdas",
-    description:
-      "Kit completo: Violín, arco, brea y estuche rígido. Ideal para iniciar el método Suzuki. Maderas seleccionadas para un sonido cálido.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-  {
-    id: "d1",
-    name: "Batería Acústica Pearl Roadshow",
-    price: 2800,
-    category: "Percusión",
-    description:
-      "Set completo de 5 piezas con platillos y hardware incluido. Color Wine Red. Todo lo que necesitas para empezar a marcar el ritmo.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-  {
-    id: "a1",
-    name: "Afinador Cromático Clip",
-    price: 45,
-    category: "Accesorios",
-    description:
-      "Alta precisión para guitarra, bajo, violín y ukelele. Pantalla LCD iluminada y giratoria de 360 grados. Batería incluida.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-  {
-    id: "a2",
-    name: "Atril de Partituras Plegable",
-    price: 60,
-    category: "Accesorios",
-    description:
-      "Estructura metálica resistente, altura regulable y funda de transporte. Esencial para la lectura musical correcta y una buena postura.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-  // MERCH
-  {
-    id: "m1",
-    name: "Polera RR Official",
-    price: 120,
-    category: "Merch",
-    description:
-      "Hoodie negro con logo bordado de alta calidad. Algodón reactivo premium que no encoge. Viste la pasión por la música.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-  {
-    id: "m2",
-    name: 'Polo "Breathe Music"',
-    price: 60,
-    category: "Merch",
-    description:
-      "T-shirt de corte moderno con nuestro slogan. Disponible en blanco y negro. Algodón pima fresco y suave.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-  {
-    id: "m3",
-    name: "Gorra RR Snapback",
-    price: 45,
-    category: "Merch",
-    description:
-      "Gorra urbana con logo en relieve 3D. Ajustable. Estilo clásico snapback para protegerte del sol con estilo.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-  {
-    id: "m4",
-    name: "Tote Bag Musical",
-    price: 35,
-    category: "Merch",
-    description:
-      "Bolso de tela resistente ideal para llevar tus partituras y accesorios. Diseño ecológico y lavable.",
-    images: [
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-      "/images/carrusel_1.jpg",
-    ],
-  },
-];
+if (startIndex !== -1 && endIndex !== -1) {
+    content = content.substring(0, startIndex) + teachersData + '\n\n' + content.substring(endIndex);
+    fs.writeFileSync('constants.ts', content);
+}
