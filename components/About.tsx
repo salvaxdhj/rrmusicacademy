@@ -68,7 +68,7 @@ const About: React.FC = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Quiénes Somos
+            ¿Quiénes Somos?
           </h1>
           <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
             Más que una escuela, somos un hogar para el desarrollo artístico.
